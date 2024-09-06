@@ -4,12 +4,25 @@ import Layout from '../components/layout.astro';
 const assetsUrl = 'img'
 const products = [
   {
-    href: 'https://pokemon-awesome.vercel.app/',
-    name: 'Pokémon Awesome',
-    desc: 'Rank #2 on Google when you search for "compare pokemons".',
+    href: 'https://weather-app-abdlrahmanls-projects.vercel.app',
+    name: 'Weather Forecast',
+    desc: "Weather Forecast for All of Indonesia areas Today and the Next 3 Days",
     dateInfo: 'July 2024',
-    preview: { src: 'pokemon-awesome.webp', width: 600, height: 379 },
-    previewPlaceholder: { src: 'pokemon-awesome-placeholder.webp', width: 500, height: 316 },
+    preview: { src: 'weather.webp', width: 100, height: 10 },
+  },
+  {
+    href: 'https://receipt-two.vercel.app/',
+    name: 'Food Recipe',
+    desc: "Food recipe showcase article",
+    dateInfo: 'September 2022',
+    preview: { src: 'recipe.webp', width: 100, height: 10 },
+  },
+  {
+    href: 'https://www.youtube.com/watch?v=3mgtNeIptgk',
+    name: 'Playstore look like',
+    desc: "Playstore look like",
+    dateInfo: 'April 2020',
+    preview: { src: 'playstore.webp', width: 100, height: 10 },
   },
 ];
 ---
@@ -18,15 +31,6 @@ const products = [
   title="Abdul Rahman"
   description="Abdul Rahman, a software engineer focused on web development and currently is focusing on fullstack."
 >
-  <Fragment slot="head">
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      href={`/img/${products[0].previewPlaceholder!.src}`}
-    />
-  </Fragment>
-
   <main class="px-5 py-14 sm:px-7 md:px-8 md:pt-16 md:pb-24 mx-auto max-w-2xl transition-[padding]">
     <h1 class="font-bold text-2xl sm:text-3xl">Abdul Rahman</h1>
     <p class="pt-0.5 text-neutral-400 text-lg sm:text-2xl font-extralight">
@@ -44,7 +48,7 @@ const products = [
     </p>
 
     <div
-      class="mt-12 ext-2xl font-extralight flex gap-3.5 items-center text-neutral-400 tracking-wide"
+      class="mt-12 text-2xl font-extralight flex gap-3.5 items-center text-neutral-400 tracking-wide"
     >
       <h2>PROJECTS</h2>
       <div class="h-px bg-neutral-500 flex-1"></div>
@@ -80,22 +84,7 @@ const products = [
             </div>
             <p class="text-sm pt-1.5 pb-4 text-neutral-400 font-light">{product.desc}</p>
             <div class="rounded-lg overflow-hidden relative border border-neutral-700">
-              {product.previewPlaceholder ? (
-                <>
-                  <img
-                    id={`img-${i}`}
-                    src={`${assetsUrl}/${product.previewPlaceholder.src}`}
-                    width={product.previewPlaceholder.width}
-                    height={product.previewPlaceholder.height}
-                    class="w-full"
-                    alt={`${product.name} preview`}
-                  />
-                  <div class="absolute bottom-4 right-4 bg-white/90 rounded-md px-3 py-1.5 text-sm appear text-neutral-800 shadow-md">
-                    ⏳ &nbsp;Loading animated preview...
-                  </div>
-                </>
-              ) : (
-                <img
+              <img
                   src={`${assetsUrl}/${product.preview.src}`}
                   width={product.preview.width}
                   height={product.preview.height}
@@ -103,7 +92,6 @@ const products = [
                   alt={`${product.name} preview`}
                   loading="lazy"
                 />
-              )}
             </div>
           </section>
         );
