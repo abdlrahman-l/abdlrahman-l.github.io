@@ -12,22 +12,22 @@ const { href, name, desc, dateInfo, preview, tags } = Astro.props;
 ---
 
 <div
-    class="bg-[#AE445A] h-full border border-[#AE445A] rounded-md shadow-md cursor-pointer p-3 space-y-3 flex flex-col justify-between"
+    class="bg-secondary h-full rounded-md shadow-md cursor-pointer p-3 space-y-3 flex flex-col justify-between"
 >
     <div class="space-y-3">
-        <h4 class="text-sm font-bold">{name}</h4>
-        <p class="text-xs font-light !m-0 text-neutral-300">{desc}</p>
+        <h4 class="text-sm font-bold text-tertiary">{name}</h4>
+        <p class="text-xs font-light !m-0 text-neutral-300 text-tertiary">{desc}</p>
 
         <div class="w-full flex flex-wrap">
             {
                 tags.map((t) => (
-                    <span class="bg-red-100 text-red-800 text-xs font-medium mt-2 me-2 px-2.5 py-1 rounded dark:bg-red-900 dark:text-red-300">{t}</span>
+                    <span class="bg-primary text-tertiary text-xs font-medium mt-2 me-2 px-2.5 py-1 rounded">{t}</span>
                 ))
             }
         </div>
     </div>
     <div class="h-[150px] overflow-hidden rounded-md relative">
-        <span class="absolute top-0 right-0 z-10 bg-[#1C325B] p-1 text-xs rounded-bl-md">{dateInfo}</span>
+        <span class="absolute top-0 right-0 z-10 bg-tertiary p-1 text-xs rounded-bl-md">{dateInfo}</span>
         <img
             src={`${assetsUrl}/${preview.src}`}
             alt={`${name} preview`}
