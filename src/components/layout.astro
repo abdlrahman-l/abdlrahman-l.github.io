@@ -1,4 +1,5 @@
 ---
+import '@fontsource/open-sans';
 interface Props {
   title: string;
   description: string;
@@ -32,6 +33,9 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
+  * {
+    font-family: 'Open Sans Variable', sans-serif;
+  }
   body {
     color: #FFFFFF;
     background: #1C325B;
