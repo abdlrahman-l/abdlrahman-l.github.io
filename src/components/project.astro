@@ -12,11 +12,11 @@ const { href, name, desc, dateInfo, preview, tags } = Astro.props;
 ---
 
 <div
-    class="bg-secondary h-full rounded-md shadow-md cursor-pointer p-3 space-y-3 flex flex-col justify-between"
+    class="bg-black border h-full rounded-md shadow-md cursor-pointer p-3 space-y-3 flex flex-col justify-between"
 >
     <div class="space-y-2">
-        <h4 class="text-sm font-bold text-tertiary">{name}</h4>
-        <p class="text-xs font-light text-neutral-300 text-tertiary">{desc}</p>
+        <h4 class="text-sm font-bold">{name}</h4>
+        <p class="text-xs font-light text-neutral-300">{desc}</p>
 
         <div class="w-full flex flex-wrap">
             {
@@ -26,8 +26,8 @@ const { href, name, desc, dateInfo, preview, tags } = Astro.props;
             }
         </div>
     </div>
-    <div class="h-[150px] overflow-hidden rounded-md relative">
-        <span class="absolute top-0 right-0 z-10 bg-tertiary p-1 text-xs rounded-bl-md">{dateInfo}</span>
+    <div class="h-[150px] overflow-hidden rounded-md relative border">
+        <span class="absolute top-0 right-0 z-10 bg-black p-1 text-xs rounded-bl-md">{dateInfo}</span>
         <img
             src={`${assetsUrl}/${preview.src}`}
             alt={`${name} preview`}
