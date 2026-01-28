@@ -6,125 +6,142 @@ import Introduction from "../components/introduction.astro";
 
 // const assetsUrl = "img";
 const stack = [
-    "NextJS",
-    "Astro",
-    "React.js",
-    "Tailwind",
-    "Typescript",
-    "Javascript",
-    "NodeJS",
-    "React-Query",
-    "HTML",
-    "CSS",
-    "MySQL",
-    "Go",
+  "NextJS",
+  "Astro",
+  "React.js",
+  "Tailwind",
+  "Typescript",
+  "Javascript",
+  "NodeJS",
+  "Tanstack Query",
+  "Vite",
+  "HTML",
+  "CSS",
+  "MySQL",
+  "Go",
+  "Docker",
+  "Nginx",
 ];
 const products = [
-    {
-        href: "https://usstocksexchange.vercel.app/",
-        name: "US Stocks Exchange App",
-        desc: "US stocks timeseries, compare the another tickers within one chart",
-        dateInfo: "Feb 2025",
-        preview: { src: "usStockExchange.webp", width: 100, height: 10 },
-        tags: ["NextJs App Router", "React.js", "Tailwind", "Typescript", "Rechart", "ShadCN UI"],
-    },
-    {
-        href: "https://tictactix.netlify.app/",
-        name: "Dynamic Tictactoe",
-        desc: "Tictactoe with dynamic board length, created without ChatGPT",
-        dateInfo: "Dec 2024",
-        preview: { src: "tictactoe.webp", width: 100, height: 10 },
-        tags: ["Astro", "React.js", "Tailwind", "Typescript"],
-    },
-    {
-        href: "https://weather-app-abdlrahmanls-projects.vercel.app",
-        name: "Weather Forecast",
-        desc: "Weather forecast Indonesia, included province, regency, subdistrict, and ward/village within 3 days",
-        dateInfo: "July 2024",
-        preview: { src: "weather_new.webp", width: 100, height: 10 },
-        tags: ["NextJS", "React.js", "Tailwind", "Typescript"],
-    },
-    {
-        href: "https://receipt-two.vercel.app/",
-        name: "Food Recipe",
-        desc: "Collection of food recipe articles around the world",
-        dateInfo: "September 2022",
-        preview: { src: "recipe.webp", width: 100, height: 10 },
-        tags: [
-            "NextJS",
-            "React.js",
-            "Styled-components",
-            "Typescript",
-            "Redux",
-        ],
-    },
-    {
-        href: "https://www.npmjs.com/~manskuy",
-        name: "Monorepo component library",
-        desc: "Collection of react components and hooks using Atomic Design",
-        dateInfo: "September 2022",
-        preview: { src: "monorepo.webp", width: 100, height: 10 },
-        tags: ["React.js", "Styled-components", "Typescript", "Monorepo"],
-    },
-    {
-        href: "https://www.youtube.com/watch?v=3mgtNeIptgk",
-        name: "Playstore look like",
-        desc: "Playstore clone application using Java",
-        dateInfo: "April 2020",
-        preview: { src: "playstore.webp", width: 100, height: 10 },
-        tags: ["Android", "Java"],
-    },
+  {
+    href: "https://focus-dojo.vercel.app/",
+    name: "Focus Dojo",
+    desc: "Focus Dojo is a Digital Attention Rehabilitation platform.",
+    dateInfo: "Feb 2025",
+    preview: { src: "focus-dojo.webp", width: 100, height: 10 },
+    tags: [
+      "Tanstack router",
+      "React.js",
+      "Tailwind",
+      "Typescript",
+      "ShadCN UI",
+      "Vite",
+    ],
+  },
+  {
+    href: "https://usstocksexchange.vercel.app/",
+    name: "US Stocks Exchange App",
+    desc: "Real-time US Stocks visualization allows comparison of multiple tickers on a single interactive chart.",
+    dateInfo: "Feb 2025",
+    preview: { src: "usStockExchange.webp", width: 100, height: 10 },
+    tags: [
+      "NextJs App Router",
+      "React.js",
+      "Tailwind",
+      "Typescript",
+      "Rechart",
+      "ShadCN UI",
+    ],
+  },
+  {
+    href: "https://tictactix.netlify.app/",
+    name: "Dynamic Tictactoe",
+    desc: "Features dynamic grid generation and scalable game logic for arbitrary board sizes.",
+    dateInfo: "Dec 2024",
+    preview: { src: "tictactoe.webp", width: 100, height: 10 },
+    tags: ["Astro", "React.js", "Tailwind", "Typescript"],
+  },
+  {
+    href: "https://weather-app-abdlrahmanls-projects.vercel.app",
+    name: "Weather Forecast",
+    desc: "Location-based weather forecast for Indonesia (Province to Village level) with a 3-day projection.",
+    dateInfo: "July 2024",
+    preview: { src: "weather_new.webp", width: 100, height: 10 },
+    tags: ["NextJS", "React.js", "Tailwind", "Typescript"],
+  },
+  {
+    href: "https://receipt-two.vercel.app/",
+    name: "Food Recipe",
+    desc: "Recipe catalog with state management via Redux and custom theming using Styled-components.",
+    dateInfo: "September 2022",
+    preview: { src: "recipe.webp", width: 100, height: 10 },
+    tags: ["NextJS", "React.js", "Styled-components", "Typescript", "Redux"],
+  },
+  {
+    href: "https://www.npmjs.com/~manskuy",
+    name: "Monorepo component library",
+    desc: "Collection of react components and hooks using Atomic Design",
+    dateInfo: "September 2022",
+    preview: { src: "monorepo.webp", width: 100, height: 10 },
+    tags: ["React.js", "Styled-components", "Typescript", "Monorepo"],
+  },
+  //   {
+  //     href: "https://www.youtube.com/watch?v=3mgtNeIptgk",
+  //     name: "Google Play Store Clone",
+  //     desc: "Playstore clone application using Java",
+  //     dateInfo: "April 2020",
+  //     preview: { src: "playstore.webp", width: 100, height: 10 },
+  //     tags: ["Android", "Java"],
+  //   },
 ];
 ---
 
 <Layout
-    title="Abdul Rahman"
-    description="Abdul Rahman, a software engineer focused on web development and currently is focusing on fullstack."
+  title="Abdul Rahman"
+  description="Abdul Rahman, a software engineer focused on web development and currently is focusing on fullstack."
 >
-    <main class="mx-auto max-w-2xl p-2 space-y-3">
-        <Header />
-        <Introduction />
-        <section>
-            <div
-                class="w-full flex flex-wrap items-center justify-center my-10"
-            >
-                {
-                    stack.map((t) => (
-                        <span class="bg-primary text-tertiary text-xs font-semibold mt-2 me-2 px-2.5 py-1 rounded">
-                            {t}
-                        </span>
-                    ))
-                }
-            </div>
-        </section>
-        <div class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-            {
-                products.map((p) => (
-                    <a href={p.href} target="_blank">
-                        <Project {...p} />
-                    </a>
-                ))
-            }
-        </div>
+  <main class="mx-auto max-w-2xl p-2 space-y-3">
+    <Header />
+    <Introduction />
+    <section>
+      <div class="w-full flex flex-wrap items-center justify-center my-10">
+        {
+          stack.map((t) => (
+            <span class="bg-primary text-tertiary text-xs font-semibold mt-2 me-2 px-2.5 py-1 rounded">
+              {t}
+            </span>
+          ))
+        }
+      </div>
+    </section>
+    <div class="grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+      {
+        products.map((p) => (
+          <a href={p.href} target="_blank">
+            <Project {...p} />
+          </a>
+        ))
+      }
+    </div>
 
-        <section>
-            <div
-                class:list={[
-                    "flex flex-col my-10",
-                    "[&_a]:inline-block [&_a]:py-1",
-                    "[&_a:hover]:underline [&_a:hover]:decoration-dashed [&_a:hover]:decoration-blue-400",
-                ]}
-            >
-                <a href="mailto:abdulrahmaninformatics@gmail.com"
-                    >abdulrahmaninformatics@gmail.com</a
-                >
-                <a href="https://www.linkedin.com/in/abdulrahman-l/"
-                    >linkedin.com<span>/abdulrahman-l/</span></a
-                >
-                <a href="https://github.com/abdlrahman-l"
-                    >github.com<span>/abdlrahman-l</span></a
-                >
-            </div>
-        </section>
-    </main>
+    <section>
+      <div
+        class:list={[
+          "flex flex-col my-10",
+          "[&_a]:inline-block [&_a]:py-1",
+          "[&_a:hover]:underline [&_a:hover]:decoration-dashed [&_a:hover]:decoration-blue-400",
+        ]}
+      >
+        <a href="mailto:abdulrahmaninformatics@gmail.com"
+          >abdulrahmaninformatics@gmail.com</a
+        >
+        <a href="https://www.linkedin.com/in/abdulrahman-l/"
+          >linkedin.com<span>/abdulrahman-l/</span></a
+        >
+        <a href="https://github.com/abdlrahman-l"
+          >github.com<span>/abdlrahman-l</span></a
+        >
+      </div>
+    </section>
+  </main>
 </Layout>
